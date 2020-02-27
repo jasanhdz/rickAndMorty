@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6d5e6c51ba8a9b797281",
+    "revision": "2abc80b288509cb64b3f",
     "url": "/rickAndMorty/static/css/main.ce103bae.chunk.css"
   },
   {
-    "revision": "6d5e6c51ba8a9b797281",
-    "url": "/rickAndMorty/static/js/main.4091811b.chunk.js"
+    "revision": "2abc80b288509cb64b3f",
+    "url": "/rickAndMorty/static/js/main.14e0cb84.chunk.js"
   },
   {
     "revision": "743771835d854e8a3922",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/rickAndMorty/static/media/logo.de82c64b.png"
   },
   {
-    "revision": "a21b9669e4feae505611d168cbd853d8",
+    "revision": "9224e5e0494fd6d5eadf0290191fbb80",
     "url": "/rickAndMorty/index.html"
   }
 ];
