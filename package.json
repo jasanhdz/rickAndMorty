@@ -4,17 +4,16 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "dependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-scripts": "^2.0.3"
-  },
-  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-scripts": "^2.0.3"
   },
   "browserslist": [
     ">0.2%",
