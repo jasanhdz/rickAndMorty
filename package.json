@@ -1,16 +1,21 @@
 {
+  "homepage": "https://jasanhdz.github.io/rickAndMorty",
   "name": "rick-y-morty",
   "version": "1.0.0",
+  "proxy": "https://rick-and-morty-api.now.sh/",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "http-proxy-middleware": "^1.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "^2.0.3"
@@ -20,5 +25,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
 }

@@ -3,29 +3,19 @@ import "../styles.css";
 import logo from "../images/logo.png";
 import CharacterCard from "../components/characterCard";
 
-const Mounted = (setState, state) => {
-  useEffect(() => {
-    console.log("ComponentDidMount");
-    fetchCharacters(setState, state);
-    // console.log(`Este es el fetch`);
-    // console.log(state.data);
-    return () => {
-      console.log("CompontedWillMount");
-      new AbortController.abort();
-    };
-  }, []);
-};
-
 const fetchCharacters = async (setState, state) => {
-  // console.log(`Este es el fetch`);
-  // console.log(state);
   setState({ ...state, loading: true });
+  const url = "https://rickandmortyapi.com";
   try {
-    const response = await fetch(
-      `https://rickandmortyapi.com/api/character/?page=${state.nextPages}`
-    );
+    const response = await fetch(`${url}/api/character`, {
+      mode: "cors",
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     setState({
       ...state,
@@ -36,6 +26,7 @@ const fetchCharacters = async (setState, state) => {
       },
       nextPages: state.nextPages + 1
     });
+    console.log(state.data);
   } catch (error) {
     setState({ ...state, loading: false, error: error });
   }
@@ -48,9 +39,16 @@ const App = () => {
     },
     loading: false,
     error: null,
-    nextPages: 1
+    nextPages: 3
   });
-  Mounted(setState, state);
+  useEffect(() => {
+    console.log("ComponentDidMount");
+    fetchCharacters(setState, state);
+    return () => {
+      console.log("CompontedWillMount");
+      new AbortController.abort();
+    };
+  }, []);
   if (state.error) {
     return (
       <div>
