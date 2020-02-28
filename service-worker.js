@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/rickAndMorty/precache-manifest.4db99f82a27139002117634ced23c88b.js"
+  "/rickAndMorty/precache-manifest.f62088217e27261ab7980849b6b7768b.js"
 );
 
 workbox.clientsClaim();
